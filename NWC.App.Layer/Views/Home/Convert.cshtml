@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<form name="numberForm">
+    <!-- Section: convert -->
+    <section id="convert" class="home-section nopadd-bot color-dark bg-gray text-center">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="animatedParent">
+                        <div class="section-heading text-center">
+                            <h2 class="h-bold animated bounceInDown">Numbers to Words Converter</h2>
+                            <div class="divider-header"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="row marginbot-80">
+                <div class="col-md-8 col-md-offset-2">
+
+
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control" id="name" placeholder="Your Name" ng-required="true" ng-model="name" />
+                                <span ng-show="numberForm.name.$touched && numberForm.name.$invalid"><font color="red">The name is required.</font></span>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="form-group">
+                                <input type="text" id="number" class="form-control" name="number" id="number" placeholder="Number" required ng-pattern="/^[\+\-]?\d{0,13}\.?\d*$/" ng-model="number" />
+                                <span ng-show="numberForm.number.$touched && numberForm.number.$invalid"><font color="red">Please enter a valid decimal number between -1000000000000 and +1000000000000.</font></span>
+                            </div>
+                            <button ng-click="processNumber()" ng-disabled="numberForm.$invalid" class="btn btn-skin btn-lg btn-block" id="btnContactUs">
+                                Convert
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- /Section: convert -->
+</form>

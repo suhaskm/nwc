@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Results";
+}
+
+
+<!-- Section: convert -->
+<section id="convert" class="home-section nopadd-bot color-dark bg-gray text-center">
+    <div class="container marginbot-50">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="animatedParent">
+                    <div class="section-heading text-center">
+                        <h2 class="h-bold animated bounceInDown">Success!!</h2>
+                        <div class="divider-header"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="container">
+
+            <div class="row marginbot-50">
+                <div class="col-md-8 col-md-offset-2">
+                    {{name}}<br />
+                    <div class="capitalize">"{{result}}"</div>
+                    {{response}}
+                </div>
+               
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <button ng-click="convertNumber()" class="btn btn-skin btn-lg btn-block" id="btnContactUs">
+                    Try Again
+                </button>
+            </div>
+            </div>
+</section>
